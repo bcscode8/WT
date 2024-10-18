@@ -1,0 +1,23 @@
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, Binarizer
+
+
+df = pd.read_csv('winequality-red.csv')
+
+scaler = MinMaxScaler()
+df_normalized = scaler.fit_transform(df)
+
+print("Normalized dataset:")
+print(df_normalized)
+
+scaler = StandardScaler()
+df_standardized = scaler.fit_transform(df)
+
+print("\nStandardized dataset:")
+print(df_standardized)
+
+binarizer = Binarizer(threshold=0.5)  
+df_binarized = binarizer.fit_transform(df)
+
+print("\nBinarized dataset:")
+print(df_binarized)

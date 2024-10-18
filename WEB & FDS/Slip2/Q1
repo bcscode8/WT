@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My City - New York</title>
+    <style>
+      body {
+        background-color: #ffc0cb; /* Pink background color */
+      }
+      .city-name {
+        font-size: 36px;
+        color: blue;
+        text-align: center;
+      }
+      .landmark {
+        font-style: italic;
+        font-family: Arial, sans-serif;
+      }
+      .landmark:nth-child(1) {
+        color: green;
+      }
+      .landmark:nth-child(2) {
+        color: red;
+        font-weight: bold;
+      }
+      .landmark:nth-child(3) {
+        color: orange;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="city-name">New York</h1>
+    <ul>
+      <li class="landmark" style="font-family: Courier, monospace">
+        Statue of Liberty
+      </li>
+      <li class="landmark" style="text-decoration: underline">Central Park</li>
+      <li class="landmark" style="font-variant: small-caps">
+        Empire State Building
+      </li>
+    </ul>
+    <img
+      src="https://via.placeholder.com/500x200"
+      alt="New York City Skyline"
+      style="display: block; margin: 20px auto"
+    />
+  </body>
+</html>

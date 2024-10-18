@@ -1,0 +1,36 @@
+import pandas as pd
+import numpy as np
+
+# 1. Create a dataframe containing columns name, age and percentage. Add 10 rows to the dataframe.
+data = {'name': ['John', 'Mary', 'David', 'Emily', 'Michael', 'Sarah', 'Kevin', 'Jessica', 'Oliver', 'Hannah'],
+        'age': [20, 21, 19, 22, 20, 21, 20, 19, 22, 21],
+        'percentage': [85, 90, 78, 92, 88, 89, 84, 91, 87, 90]}
+df = pd.DataFrame(data)
+
+print("Original DataFrame:")
+print(df)
+
+# 2. Print the shape, number of rows-columns, data types, feature names and the description of the data.
+print("\nShape:", df.shape)
+print("Number of rows-columns:", df.shape[0], "rows,", df.shape[1], "columns")
+print("Data Types:")
+print(df.dtypes)
+print("Feature Names:", df.columns.tolist())
+print("Description of the data:")
+print(df.describe())
+
+# 3. View basic statistical details of the data.
+print("\nBasic Statistical Details:")
+print(df.describe())
+
+# 4. Add 5 rows with duplicate values and missing values. Add a column ‘remarks’ with empty values.
+new_data = {'name': ['John', 'Mary', 'David', 'Emily', 'Michael'],
+            'age': [20, 21, 19, 22, np.nan],
+            'percentage': [85, 90, 78, 92, 88]}
+new_df = pd.DataFrame(new_data)
+df = pd.concat([df, new_df])
+
+df['remarks'] = ''
+
+print("\nUpdated DataFrame with duplicate values, missing values, and new column 'remarks':")
+print(df)

@@ -1,0 +1,17 @@
+Q2.A
+
+import numpy as np
+
+
+arr = np.array([[0, 1], [2, 3 ]])
+
+
+weights = np.array([0.5, 0.5])
+
+
+flattened_arr = arr.flatten()
+
+
+weighted_average = np.average(flattened_arr, weights=weights)
+
+print("Weighted average of the array is:", weighted_average)

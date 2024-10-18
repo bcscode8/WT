@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style>
+      .navbar {
+        display: flex;
+        background-color: #d1d5db;
+      }
+      .navbar a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+      }
+      .navbar .home {
+        background-color: #6b7280;
+        color: white;
+        font-weight: bold;
+      }
+      .navbar a:not(.home) {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#" class="home">Home</a>
+      <a href="#">Java</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+    </div>
+  </body>
+</html>

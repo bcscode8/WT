@@ -1,0 +1,44 @@
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def insert(self, element):
+        self.stack.append(element)
+
+    def delete(self):
+        if len(self.stack) == 0:
+            print("Stack is empty. Cannot delete.")
+        else:
+            self.stack.pop()
+
+    def display(self):
+        print("Stack contents:")
+        for element in self.stack:
+            print(element)
+
+def main():
+    stack = Stack()
+
+    while True:
+        print("\nStack Operations Menu:")
+        print("1. Insert an element")
+        print("2. Delete an element")
+        print("3. Display stack contents")
+        print("4. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            element = input("Enter the element to insert: ")
+            stack.insert(element)
+        elif choice == 2:
+            stack.delete()
+        elif choice == 3:
+            stack.display()
+        elif choice == 4:
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()

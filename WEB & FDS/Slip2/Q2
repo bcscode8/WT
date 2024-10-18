@@ -1,0 +1,10 @@
+B.
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as p
+df=p.DataFrame({'name':['kunal','rekha','satish','ashish','radha'],
+ 'age':[20,23,22,20,21],
+ 'per':[98,80,95,92,85],
+ 'salary':[100000,300000,20000,300000,80000] })
+df.plot(x="name",y="salary")
+plt.show()

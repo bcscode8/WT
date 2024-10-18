@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Comparison Form</title>
+  </head>
+  <body>
+    <h2>String Comparison Form</h2>
+    <form action="Q1.php" method="post">
+      <label for="large_string">Large String:</label>
+      <input type="text" id="large_string" name="large_string" /><br /><br />
+      <label for="small_string">Small String:</label>
+      <input type="text" id="small_string" name="small_string" /><br /><br />
+      <label for="n">Compare first n characters:</label>
+      <input type="number" id="n" name="n" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+<?php
+$s1=$_POST['str1'];
+$s2=$_POST['str2'];
+if(strpos($s2,$s1))
+{
+echo "$s1 is present at begining at $s2<br>";
+}
+else
+{
+echo "$s1 is no present at the begining of $s2<br>";
+}
+$z=strpos($s2,$s1);
+echo "position of $1 in $s2 is $z<br>";
+$z=strncmp($s1,$s2,3);
+if($z==0)
+{
+echo "both string matches 3 char";
+}
+else
+{
+echo "string not match";
+}
+?>
+

@@ -1,0 +1,33 @@
+<?php
+
+echo "Enter a sentence: ";
+$sentence = trim(fgets(STDIN));
+
+echo "Enter a word: ";
+$word = trim(fgets(STDIN));
+
+echo "Enter the position to delete from: ";
+$deletePos = (int) trim(fgets(STDIN));
+
+echo "Enter the number of characters to delete: ";
+$deleteCount = (int) trim(fgets(STDIN));
+
+$sentenceDeleted = substr_replace($sentence, '', $deletePos, $deleteCount);
+echo "Sentence after deletion: $sentenceDeleted\n";
+
+echo "Enter the position to insert at: ";
+$insertPos = (int) trim(fgets(STDIN));
+
+$sentenceInserted = substr_replace($sentence, $word, $insertPos, 0);
+echo "Sentence after insertion: $sentenceInserted\n";
+
+echo "Enter the position to replace from: ";
+$replacePos = (int) trim(fgets(STDIN));
+
+echo "Enter the number of characters to replace: ";
+$replaceCount = (int) trim(fgets(STDIN));
+
+$sentenceReplaced = substr_replace($sentence, $word, $replacePos, $replaceCount);
+echo "Sentence after replacement: $sentenceReplaced\n";
+
+?>

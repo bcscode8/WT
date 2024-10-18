@@ -1,0 +1,13 @@
+A.
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.random.randn(50)
+y = np.random.randn(50)
+plt.plot(x,y)
+plt.show()
+plt.scatter(x,y)
+plt.show()
+plt.hist(x)
+plt.show()
+plt.boxplot(y, vert=False)
+plt.show()

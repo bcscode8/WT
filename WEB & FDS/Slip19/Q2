@@ -1,0 +1,46 @@
+Q2
+1)
+import pandas as pd
+
+data = {
+    'Name': ['John', 'Emma', 'Michael', 'Olivia', 'William', 'Sophia', 'Jackson', 'Ava', 'Ethan', 'Lily'],
+    'Age': [25, 30, 28, 35, 40, 22, 38, 26, 32, 29],
+    'Percentage': [85, 90, 78, 92, 88, 76, 95, 89, 91, 84]
+}
+
+df = pd.DataFrame(data)
+
+print("Data Frame:")
+print(df)
+
+
+
+
+
+
+2)
+import pandas as pd
+
+data = {
+    'Name': ['John', 'Emma', 'Michael', 'Olivia', 'William', 'Sophia', 'Jackson', 'Ava', 'Ethan', 'Lily'],
+    'Age': [25, 30, 28, 35, 40, 22, 38, 26, 32, 29],
+    'Percentage': [85, 90, 78, 92, 88, 76, 95, 89, 91, 84]
+}
+
+df = pd.DataFrame(data)
+
+print("Shape of the DataFrame:")
+print(df.shape)
+
+print("\nNumber of rows and columns:")
+print("Rows:", df.shape[0])
+print("Columns:", df.shape[1])
+
+print("\nData types of each column:")
+print(df.dtypes)
+
+print("\nFeature names:")
+print(df.columns)
+
+print("\nDescription of the data:")
+print(df.describe())

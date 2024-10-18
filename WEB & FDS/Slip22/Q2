@@ -1,0 +1,24 @@
+Q2
+
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer
+
+df = pd.read_csv('winequality-red.csv')
+
+scaler = MinMaxScaler()
+df_normalized = scaler.fit_transform(df)
+
+print("Normalized dataset:")
+print(df_normalized)
+
+scaler = StandardScaler()
+df_standardized = scaler.fit_transform(df)
+
+print("\nStandardized dataset:")
+print(df_standardized)
+
+scaler = Normalizer()
+df_normalized_unit = scaler.fit_transform(df)
+
+print("\nNormalized dataset with unit norm:")
+print(df_normalized_unit)

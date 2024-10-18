@@ -1,0 +1,41 @@
+Q2 A)
+
+import matplotlib.pyplot as plt
+
+subjects = ['Math', 'Science', 'English', 'History', 'Geography']
+
+marks = [85, 90, 78, 92, 88]
+
+plt.figure(figsize=(10, 8))
+plt.pie(marks, labels=subjects, autopct='%1.1f%%')
+plt.title('Marks Obtained in Each Subject (Pie Chart)')
+plt.show()
+
+plt.figure(figsize=(10, 8))
+plt.bar(subjects, marks)
+plt.xlabel('Subjects')
+plt.ylabel('Marks Obtained')
+plt.title('Marks Obtained in Each Subject (Bar Chart)')
+plt.show()
+
+
+
+Q2 B)
+
+import pandas as pd
+students_info = {
+    'Name': ['John', 'Emma', 'Michael', 'Olivia', 'William'],
+    'Graduation Percentage': [85, 92, 78, 95, 88],
+    'Age': [20, 21, 22, 20, 21]
+}
+
+df = pd.DataFrame(students_info)
+
+print("Students' Information:")
+print(df)
+
+average_age = df['Age'].mean()
+print("\nAverage Age of Students:", average_age)
+
+average_graduation_percentage = df['Graduation Percentage'].mean()
+print("Average Graduation Percentage:", average_graduation_percentage)

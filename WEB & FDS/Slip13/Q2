@@ -1,0 +1,20 @@
+
+Q2 B.
+
+
+import numpy as np
+
+
+arr = np.array([[0, 1], [2, 3]])
+
+
+flattened_arr = arr.flatten()
+
+
+max_value = np.max(flattened_arr)
+
+
+min_value = np.min(flattened_arr)
+
+print("Maximum value in the array is:", max_value)
+print("Minimum value in the array is:", min_value)
